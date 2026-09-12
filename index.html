@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#B71C1C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Usta Ghazi (أسطا غازي) - Charcoal-Grilled Shawarma in Al Tahliya, Al Khobar. Famous for our signature Red Bread, Arabi boxes up to 30 pcs, and late-night dining.">
+  <title>Usta Ghazi | أسطا غازي - Charcoal-Grilled Shawarma Al Khobar</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="status-indicator">
+        <span class="status-dot pulsing" id="statusDot"></span>
+        <span id="liveStatusText" data-i18n="statusChecking">Checking opening status...</span>
+      </div>
+      <div class="top-links">
+        <span class="top-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span data-i18n="topAddress">King Khalid Rd, Al Tahliya</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="navbar">
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-logo" aria-label="Usta Ghazi Home">
+        <!-- EXACT OFFICIAL RESTAURANT LOGO -->
+        <img src="assets/logo.jpg" alt="Usta Ghazi Official Logo" class="logo-official-img">
+        <div class="brand-name-line">
+          <span class="brand-name-en">USTA GHAZI</span>
+          <span class="brand-divider">|</span>
+          <span class="brand-name-ar">أسطا غازي</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <div class="mobile-drawer-header">
+          <div class="drawer-brand">
+            <img src="assets/logo.jpg" alt="Logo" class="drawer-logo-img">
+            <span>USTA GHAZI | أسطا غازي</span>
+          </div>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+        </div>
+        <a href="#hero" class="nav-link active" data-i18n="navHome">Home</a>
+        <a href="#menu" class="nav-link" data-i18n="navMenu">Menu & Prices</a>
+        <a href="#reviews" class="nav-link" data-i18n="navReviews">Google Reviews</a>
+        <a href="#location" class="nav-link" data-i18n="navLocation">Location & Hours</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
+
+        <div class="mobile-drawer-footer">
+          <div class="drawer-status-pill">
+            <span class="status-dot pulsing"></span>
+            <span>11:00 AM – 4:00 AM</span>
+          </div>
+          <div class="drawer-action-btns">
+            <button class="btn btn-outline w-100 drawer-auth-btn" id="drawerAuthBtn" onclick="handleAuthBtnClick()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span id="drawerAuthLabel" data-i18n="authSignIn">Sign In</span>
+            </button>
+            <a href="tel:0501475425" class="btn btn-primary w-100 drawer-call-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span data-i18n="callBtn">Call 0501475425</span>
+            </a>
+            <a href="https://www.instagram.com/ustaghazi/?hl=en" target="_blank" rel="noopener" class="btn btn-outline w-100">
+              <span>Instagram @ustaghazi</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Action Buttons & Language Switcher -->
+      <div class="header-actions">
+        <!-- Bilingual Language Switcher -->
+        <button class="lang-switch-btn touch-ripple" id="langToggleBtn" aria-label="Toggle Language">
+          <span class="lang-flag" id="langFlag">🇸🇦</span>
+          <span id="langText">العربية</span>
+        </button>
+
+        <!-- User Authentication / Profile Button -->
+        <button class="btn btn-auth touch-ripple" id="authBtn" aria-label="Sign In or Account" onclick="handleAuthBtnClick()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span class="auth-btn-label" id="authBtnLabel" data-i18n="authSignIn">Sign In</span>
+        </button>
+
+        <button class="btn btn-tray" id="trayToggleBtn" aria-label="View Order Tray">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="tray-badge" id="trayCount">0</span>
+        </button>
+        
+        <a href="tel:0501475425" class="btn btn-primary btn-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span class="btn-call-label" data-i18n="callBtn">Call 0501475425</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE QUICK-NAV HEADINGS BAR (Always visible on mobile & tablet) -->
+  <nav class="mobile-subnav-bar" id="mobileSubnav" aria-label="Section Headings">
+    <div class="subnav-scroll-container">
+      <a href="#hero" class="subnav-pill active" data-i18n="navHome">Home</a>
+      <a href="#menu" class="subnav-pill" data-i18n="navMenu">Menu & Prices</a>
+      <a href="#reviews" class="subnav-pill" data-i18n="navReviews">Google Reviews</a>
+      <a href="#location" class="subnav-pill" data-i18n="navLocation">Location & Hours</a>
+      <a href="#contact" class="subnav-pill" data-i18n="navContact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <span class="badge-icon">🔥</span>
+          <span data-i18n="heroBadge">Charcoal-Grilled Shawarma • Khobar</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">
+          Taste The Authentic <br>
+          <span class="text-highlight">Usta Ghazi</span> Touch
+        </h1>
+        <p class="hero-subtitle-ar" data-i18n="heroSubtitle">
+          شاورما أسطا غازي على الفحم - الطعم الأصلي، الخبز الأحمر المميز، وبوكسات العربي حتى ٣٠ قطعة في تحلية الخبر
+        </p>
+        <p class="hero-desc" data-i18n="heroDesc">
+          Known across Al Tahliya for premium charcoal-grilled shawarma, hygienic craft, signature spiced Red Bread (خبز أحمر), and family gathering boxes. Open daily until 4:00 AM.
+        </p>
+        
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary btn-lg touch-ripple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <span data-i18n="exploreMenuBtn">Explore Menu & Prices</span>
+          </a>
+          <a href="https://wa.me/966501475425?text=Hello%20Usta%20Ghazi,%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="btn btn-outline btn-lg touch-ripple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            <span data-i18n="waOrderBtn">WhatsApp Order</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-num">4.8 ★</div>
+            <div class="stat-label" data-i18n="statGoogle">Google Rating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">11 AM – 4 AM</div>
+            <div class="stat-label" data-i18n="statHours">Late Night Dining</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">Up to 30 Pcs</div>
+            <div class="stat-label" data-i18n="statArabi">Arabi Gathering Boxes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with Picture -->
+      <div class="hero-visual-col">
+        <div class="hero-showcase-card">
+          <div class="showcase-tag" data-i18n="signatureTag">Signature Specialty</div>
+          <img src="assets/food/real-wrap-red.jpg" alt="Spicy Red Bread Shawarma" class="showcase-food-img">
+          <div class="showcase-info">
+            <h3 class="showcase-title" data-i18n="showcaseTitle">Spicy Red Bread Shawarma (خبز أحمر)</h3>
+            <p class="showcase-desc" data-i18n="showcaseDesc">Freshly sliced shawarma loaded into spiced warm red flatbread with melted cheese & signature garlic cream.</p>
+            <div class="showcase-meta">
+              <span class="price-tag" data-i18n="showcasePrice">Starting from 8 SAR</span>
+              <button class="btn btn-sm btn-primary touch-ripple" onclick="openShawarmaCustomizer('Shawarma Red Bread (خبز أحمر)', 8, 'assets/food/real-wrap-red.jpg', 'red')" data-i18n="customizeNowBtn">Customize & Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE RED BREAD SPOTLIGHT -->
+  <section class="specialty-section" id="specialty">
+    <div class="container">
+      <div class="specialty-banner">
+        <div class="specialty-content">
+          <span class="section-badge" data-i18n="specBadge">MUST-TRY IN KHOBAR</span>
+          <h2 class="specialty-title" data-i18n="specTitle">The Legendary "Red Bread" (الخبز الأحمر)</h2>
+          <p class="specialty-text" data-i18n="specDesc">
+            What sets Usta Ghazi apart is our signature red bread seasoned with Anatolian red pepper spices and toasted until crisp. Available for our classic sandwiches, jumbo Saroukh, and all Arabi gathering sizes!
+          </p>
+          <div class="specialty-features">
+            <div class="spec-item">
+              <span class="spec-icon">🌶️</span>
+              <div>
+                <strong data-i18n="specF1Title">Spiced Red Dough</strong>
+                <p data-i18n="specF1Desc">Authentic savory aroma</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <span class="spec-icon">🧀</span>
+              <div>
+                <strong data-i18n="specF2Title">Melty Cheese Addition</strong>
+                <p data-i18n="specF2Desc">Rich melted cheese layer</p>
+              </div>
+            </div>
+            <div class="spec-item">
+              <span class="spec-icon">🌯</span>
+              <div>
+                <strong data-i18n="specF3Title">Saroukh & Arabi Boxes</strong>
+                <p data-i18n="specF3Desc">Available in all portion sizes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="specialty-cta">
+          <a href="#cat-arabi" class="btn btn-light btn-lg" data-i18n="viewRedBreadBtn">View Red Bread Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES PHOTO GALLERY SECTION -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="galleryBadge">SIGNATURE SELECTIONS</span>
+        <h2 class="section-title" data-i18n="galleryTitle">Signature Dishes & Specialties</h2>
+        <p class="section-desc" data-i18n="galleryDesc">
+          A glimpse of our appetizing shawarma spit, seasoned red bread shawarma, Arabi gathering boxes, and platters.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1: Shawarma Spit -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-shawarma-spit.jpg" alt="Usta Ghazi Authentic Shawarma Spit" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagSpit">Fresh Daily Spit</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="spitTitle">The Master Shawarma Spit (سيخ الشاورما)</h4>
+            <p data-i18n="spitDesc">Stacked cuts roasted on the open flame until deeply caramelized and juicy.</p>
+          </div>
+        </div>
+
+        <!-- Photo 2: Arabi Box -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-arabi-box.jpg" alt="Usta Ghazi Arabi Gathering Box" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagBox">Gathering Box</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="boxTitle">The Arabi Gathering Box (شاورما عربي)</h4>
+            <p data-i18n="boxDesc">Crisp sliced shawarma rolls served with piping hot fries, garlic toum, and signature dips.</p>
+            <a href="#cat-arabi" class="gallery-action-link" data-i18n="orderBoxLink">Choose Box Size (6-30 pcs) &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Photo 3: Shawarma Plate -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-plate.jpg" alt="Usta Ghazi Shawarma Plate" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagPlatePhoto">Shawarma Platter</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="plateTitle">The Shawarma Platter (صحن شاورما)</h4>
+            <p data-i18n="plateDesc">A feast of pure sliced chicken shawarma, golden french fries, fresh warm bread, and tangy pickles.</p>
+            <a href="#cat-plates" class="gallery-action-link" data-i18n="orderPlateLink">Order Platter &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Photo 4: Loaded Shawarma Wrap -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-shawarma-loaded.jpg" alt="Loaded Shawarma Sandwich" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagWrapPhoto">Classic & Red Bread</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="wrapTitle">Toasted Shawarma Wrap (ساندوتش شاورما)</h4>
+            <p data-i18n="wrapDesc">Packed with juicy chicken shawarma, crispy fries, garlic toum, pickles, and toasted until crisp.</p>
+            <a href="#cat-sandwiches" class="gallery-action-link" data-i18n="orderWrapLink">Customize Sandwich &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Photo 5: Signature Red Bread Shawarma -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-shawarma-wrap.jpg" alt="Signature Spiced Red Bread Shawarma" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagRedShawarma">Signature Red Bread</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="redShawarmaTitle">Spiced Red Bread Shawarma (خبز أحمر)</h4>
+            <p data-i18n="redShawarmaDesc">Freshly sliced chicken shawarma packed into our seasoned Anatolian spiced flatbread and toasted to perfection.</p>
+            <a href="#cat-sandwiches" class="gallery-action-link" data-i18n="orderRedShawarmaLink">Order Red Bread &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Photo 6: Golden French Fries -->
+        <div class="gallery-card">
+          <div class="gallery-media">
+            <img src="assets/food/hq-fries.jpg" alt="Golden Crispy French Fries" loading="lazy">
+            <span class="gallery-tag" data-i18n="tagFriesPhoto">Golden Sides</span>
+          </div>
+          <div class="gallery-caption">
+            <h4 data-i18n="friesTitle">Golden Crispy Fries (بطاطس مقلية)</h4>
+            <p data-i18n="friesDesc">Crisp golden french fries seasoned with our house spice blend, served piping hot with creamy garlic toum.</p>
+            <a href="#cat-plates" class="gallery-action-link" data-i18n="orderFriesLink">Add Fries to Order &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Official Instagram Profile Showcase Banner -->
+      <div class="instagram-banner-card">
+        <div class="insta-left">
+          <div class="insta-avatar-wrap">
+            <img src="assets/logo.jpg" alt="Usta Ghazi Official Instagram" class="insta-avatar">
+            <span class="insta-verified">&#10003;</span>
+          </div>
+          <div class="insta-details">
+            <div class="insta-handle-row">
+              <span class="insta-handle">@ustaghazi</span>
+              <span class="insta-badge" data-i18n="instaBadge">Official Restaurant Page</span>
+            </div>
+            <p class="insta-bio" data-i18n="instaBioText">Specialists in charcoal-grilled shawarma • Hours: 11:00 AM to 4:00 AM • Al Khobar, Al Tahliyah • Tel: 0501475425</p>
+            <div class="insta-stats">
+              <span><strong>30</strong> <span data-i18n="instaPosts">Posts</span></span>
+              <span><strong>817+</strong> <span data-i18n="instaFollowers">Followers</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="insta-right">
+          <a href="https://www.instagram.com/ustaghazi/?hl=en" target="_blank" rel="noopener noreferrer" class="btn-instagram touch-ripple">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span data-i18n="viewInstaPostsBtn">Browse 30+ Posts & Stories on Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MENU & PRICING -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="menuBadge">OFFICIAL MENU & PRICES</span>
+        <h2 class="section-title" data-i18n="menuTitle">Authentic Shawarma Selection</h2>
+        <p class="section-desc" data-i18n="menuDesc">
+          Prepared fresh to order using Lebanese or Saj bread. Tap any item to customize with or without garlic, pickles, fries, and extra cheese!
+        </p>
+        
+        <!-- Original Menu Photo Trigger -->
+        <button class="btn btn-outline btn-sm view-menu-img-btn" id="openMenuModalBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-i18n="viewOriginalMenuBtn">View Original Menu Photo</span>
+        </button>
+      </div>
+
+      <!-- Touch-Scrollable Category Filter Bar -->
+      <div class="menu-nav-scroll" id="menuNavScroll">
+        <button class="menu-nav-btn active touch-ripple" data-category="all">
+          <span data-i18n="catAll">All Items</span>
+        </button>
+        <button class="menu-nav-btn touch-ripple" data-category="sandwiches">
+          <span data-i18n="catSandwiches">🥪 Sandwiches & Saroukh (ساندويشات وصاروخ)</span>
+        </button>
+        <button class="menu-nav-btn touch-ripple" data-category="saroukh">
+          <span>🚀 Saroukh Jumbo (صاروخ وجبن)</span>
+        </button>
+        <button class="menu-nav-btn touch-ripple" data-category="arabi">
+          <span data-i18n="catArabi">🍱 Arabi Boxes (شاورما عربي)</span>
+        </button>
+        <button class="menu-nav-btn touch-ripple" data-category="plates">
+          <span data-i18n="catPlates">🍽️ Plates & Fries (صحون)</span>
+        </button>
+        <button class="menu-nav-btn touch-ripple" data-category="drinks">
+          <span data-i18n="catDrinks">🥤 Drinks (مشروبات)</span>
+        </button>
+      </div>
+
+      <!-- CATEGORY 1: SANDWICHES -->
+      <div class="menu-category-block" id="cat-sandwiches" data-cat="sandwiches">
+        <div class="category-title-bar">
+          <h3>
+            <span data-i18n="titleSandwiches">Shawarma Sandwiches</span>
+            <small data-i18n="subSandwiches">ساندويشات شاورما (خبز لبناني / صاج)</small>
+          </h3>
+          <span class="category-meta" data-i18n="metaSandwiches">Lebanese or Saj Bread</span>
+        </div>
+
+        <div class="menu-grid">
+          
+          <!-- Item 1: Red Bread -->
+          <div class="menu-item-card featured-item">
+            <div class="card-ribbon" data-i18n="popularRibbon">Popular</div>
+            <div class="card-food-media">
+              <img src="assets/food/real-wrap-red.jpg" alt="Shawarma Red Bread" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Red Bread</h4>
+                  <div class="item-name-ar">شاورما خبز أحمر 🔥</div>
+                </div>
+                <div class="item-price">8 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descRed">Signature specialty: seasoned Anatolian red bread toasted crispy with succulent chicken shawarma.</p>
+              <div class="item-footer">
+                <span class="tag tag-spicy" data-i18n="tagRedBread">🌶️ Red Bread</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Red Bread (خبز أحمر)', 8, 'assets/food/real-wrap-red.jpg', 'red')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Cheese Red Bread -->
+          <div class="menu-item-card featured-item">
+            <div class="card-food-media">
+              <img src="assets/food/real-wrap-red.jpg" alt="Shawarma Cheese Red Bread" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Cheese Red Bread</h4>
+                  <div class="item-name-ar">شاورما خبز أحمر بالجبن</div>
+                </div>
+                <div class="item-price">9 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descRedCheese">The ultimate combo: signature spiced red bread stuffed with chicken shawarma and rich melted cheddar.</p>
+              <div class="item-footer">
+                <span class="tag tag-spicy" data-i18n="tagCombo">🌶️ + 🧀 Combo</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Cheese Red Bread (أحمر بالجبن)', 9, 'assets/food/real-wrap-red.jpg', 'red_cheese')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Normal -->
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/real-shawarma-loaded.jpg" alt="Shawarma Normal" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Normal</h4>
+                  <div class="item-name-ar">شاورما عادي</div>
+                </div>
+                <div class="item-price">7 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descNormal">Classic shaved shawarma wrapped in warm Lebanese or thin Saj bread with garlic toum and pickles.</p>
+              <div class="item-footer">
+                <span class="tag tag-classic" data-i18n="tagClassic">Classic</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Normal (عادي)', 7, 'assets/food/real-shawarma-loaded.jpg', 'normal')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Cheese -->
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/real-wrap-cheese.jpg" alt="Shawarma Cheese" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Cheese</h4>
+                  <div class="item-name-ar">شاورما بالجبن</div>
+                </div>
+                <div class="item-price">8 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descCheese">Classic shawarma sandwich layered with melted creamy cheddar cheese for an extra rich bite.</p>
+              <div class="item-footer">
+                <span class="tag tag-cheese" data-i18n="tagCheese">🧀 Cheese</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Cheese (بالجبن)', 8, 'assets/food/real-wrap-cheese.jpg', 'cheese')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATEGORY 1B: SAROUKH JUMBO (صاروخ شاورما) -->
+      <div class="menu-category-block" id="cat-saroukh" data-cat="saroukh">
+        <div class="category-title-bar">
+          <h3>
+            <span>Saroukh Jumbo Shawarma</span>
+            <small>شاورما صاروخ جمبو (سادة، جبن، وخبز أحمر)</small>
+          </h3>
+          <span class="category-meta">Extra large wrap with heavy filling & fries</span>
+        </div>
+
+        <div class="menu-grid">
+
+          <!-- Item 5: Saroukh -->
+          <div class="menu-item-card featured-item">
+            <div class="card-food-media">
+              <img src="assets/food/real-saroukh.jpg" alt="Shawarma Saroukh" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Saroukh</h4>
+                  <div class="item-name-ar">شاورما صاروخ</div>
+                </div>
+                <div class="item-price">13 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descSaroukh">Extra-long jumbo wrap packed with heavy portions of shawarma, garlic toum, and fries inside.</p>
+              <div class="item-footer">
+                <span class="tag tag-large" data-i18n="tagJumbo">🚀 Jumbo Large</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Saroukh (صاروخ)', 13, 'assets/food/real-saroukh.jpg', 'saroukh')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Saroukh Cheese (شاورما بالجبن صاروخ) -->
+          <div class="menu-item-card featured-item">
+            <div class="card-ribbon" style="background:#D97706; color:#FFF;">🧀 Cheese</div>
+            <div class="card-food-media">
+              <img src="assets/food/real-saroukh.jpg" alt="Shawarma with Cheese Rocket" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Cheese Rocket (Saroukh)</h4>
+                  <div class="item-name-ar">شاورما بالجبن صاروخ 🧀</div>
+                </div>
+                <div class="item-price">14 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descSaroukhCheese">Jumbo Saroukh with an indulgent coat of melted cheese throughout the whole roll.</p>
+              <div class="item-footer">
+                <span class="tag tag-cheese" data-i18n="tagJumboCheese">🧀 Jumbo Cheese</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Saroukh Cheese (صاروخ بالجبن)', 14, 'assets/food/real-saroukh.jpg', 'saroukh_cheese')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Red Bread Saroukh -->
+          <div class="menu-item-card featured-item">
+            <div class="card-food-media">
+              <img src="assets/food/real-saroukh.jpg" alt="Shawarma Red Bread Saroukh" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Red Bread Saroukh</h4>
+                  <div class="item-name-ar">شاورما صاروخ خبز أحمر 🔥</div>
+                </div>
+                <div class="item-price">14 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descSaroukhRed">Jumbo wrap in our famous seasoned red bread, toasted crispy with garlic and fries inside.</p>
+              <div class="item-footer">
+                <span class="tag tag-spicy" data-i18n="tagJumboRed">🌶️ Jumbo Red</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Red Bread Saroukh (صاروخ خبز أحمر)', 14, 'assets/food/real-saroukh.jpg', 'saroukh_red')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Red Bread Saroukh Cheese -->
+          <div class="menu-item-card featured-item">
+            <div class="card-ribbon" data-i18n="topSellerRibbon">Top Seller</div>
+            <div class="card-food-media">
+              <img src="assets/food/real-saroukh.jpg" alt="Red Bread Saroukh Cheese" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Red Bread Saroukh Cheese</h4>
+                  <div class="item-name-ar">شاورما صاروخ خبز أحمر بالجبن 🔥🧀</div>
+                </div>
+                <div class="item-price">15 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descSaroukhRedCheese">The heavy champion: jumbo spiced red bread filled with chicken shawarma, melted cheese, and toasted crisp.</p>
+              <div class="item-footer">
+                <span class="tag tag-spicy" data-i18n="tagSupreme">🔥 Top Seller</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="openShawarmaCustomizer('Shawarma Red Bread Saroukh Cheese (صاروخ أحمر بالجبن)', 15, 'assets/food/real-saroukh.jpg', 'saroukh_red_cheese')" data-i18n="addCustomBtn">+ Customize & Order</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATEGORY 2: ARABI GATHERING BOXES -->
+      <div class="menu-category-block" id="cat-arabi" data-cat="arabi">
+        <div class="category-title-bar">
+          <h3>
+            <span data-i18n="titleArabi">Shawarma Arabi Boxes</span>
+            <small data-i18n="subArabi">شاورما عربي (صناديق وبوكسات الجمعات ٦ إلى ٣٠ قطعة)</small>
+          </h3>
+          <span class="category-meta" data-i18n="metaArabi">Includes crispy fries, garlic toum & pickles</span>
+        </div>
+
+        <!-- Interactive Arabi Size Selector -->
+        <div class="arabi-interactive-box">
+          <!-- Arabi Box Photo Showcase -->
+        <div class="arabi-real-preview-banner">
+          <img src="assets/food/hq-arabi-box.jpg" alt="Arabi Gathering Box - Usta Ghazi" class="arabi-preview-photo">
+          <div class="arabi-preview-text">
+            <span class="arabi-badge" data-i18n="arabiBadgeFresh">Signature Box</span>
+            <h4 data-i18n="arabiBoxHeading">Arabi Gathering Boxes (٦ إلى ٣٠ قطعة)</h4>
+            <p data-i18n="arabiBoxSubheading">Sliced toasted shawarma served with hot crispy fries, garlic toum, and signature pickles.</p>
+          </div>
+        </div>
+
+          <div class="selector-instructions">
+            <h4 data-i18n="arabiInstructionsTitle">Select Your Arabi Box Size:</h4>
+            <p data-i18n="arabiInstructionsDesc">Tap a size below to compare bread & cheese options, or add straight to your order tray:</p>
+          </div>
+
+          <!-- Touch Pill Selector -->
+          <div class="pieces-pills-row">
+            <button class="piece-pill active touch-ripple" data-pcs="6" onclick="selectArabiSize(6)">
+              <span class="pcs-num">6 pcs</span>
+              <span class="pcs-label" data-i18n="pSolo">Solo / 1 Person</span>
+            </button>
+            <button class="piece-pill touch-ripple" data-pcs="9" onclick="selectArabiSize(9)">
+              <span class="pcs-num">9 pcs</span>
+              <span class="pcs-label" data-i18n="pMedium">Medium</span>
+            </button>
+            <button class="piece-pill touch-ripple" data-pcs="12" onclick="selectArabiSize(12)">
+              <span class="pcs-num">12 pcs</span>
+              <span class="pcs-label" data-i18n="pDouble">Double Box</span>
+            </button>
+            <button class="piece-pill touch-ripple" data-pcs="18" onclick="selectArabiSize(18)">
+              <span class="pcs-num">18 pcs</span>
+              <span class="pcs-label" data-i18n="pGathering">Gathering</span>
+            </button>
+            <button class="piece-pill touch-ripple" data-pcs="24" onclick="selectArabiSize(24)">
+              <span class="pcs-num">24 pcs</span>
+              <span class="pcs-label" data-i18n="pParty">Party Box</span>
+            </button>
+            <button class="piece-pill touch-ripple" data-pcs="30" onclick="selectArabiSize(30)">
+              <span class="pcs-num">30 pcs</span>
+              <span class="pcs-label" data-i18n="pJumbo">Jumbo Feast</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Active Size Card Matrix with Arabi Image -->
+          <div class="arabi-pricing-cards-grid" id="arabiOptionsGrid">
+            
+            <div class="arabi-variant-card">
+              <div class="variant-badge" data-i18n="arabiVarNormal">Regular</div>
+              <div class="variant-name" data-i18n="arabiNameNormal">Arabic Shawarma (شاورما عربي)</div>
+              <div class="variant-price"><span id="price-normal">17</span> <small>SAR</small></div>
+              <p class="variant-desc" data-i18n="arabiDescNormal">Crisply sliced wrap box served with hot french fries, creamy garlic sauce, and pickles.</p>
+              <button class="btn btn-sm btn-primary w-100 touch-ripple" onclick="openShawarmaCustomizer('Arabi Box ' + currentArabiPcs + ' pcs (Regular)', parseInt(document.getElementById('price-normal').textContent), 'assets/food/real-arabi-box.jpg', 'arabi')" data-i18n="addBoxBtn">+ Customize & Order</button>
+            </div>
+
+            <div class="arabi-variant-card">
+              <div class="variant-badge badge-cheese" data-i18n="arabiVarCheese">Cheese</div>
+              <div class="variant-name" data-i18n="arabiNameCheese">With Cheese (عربي بالجبن)</div>
+              <div class="variant-price"><span id="price-cheese">18</span> <small>SAR</small></div>
+              <p class="variant-desc" data-i18n="arabiDescCheese">Sliced arabi wrap with melted creamy cheese infused with garlic sauce & fries.</p>
+              <button class="btn btn-sm btn-primary w-100 touch-ripple" onclick="openShawarmaCustomizer('Arabi Box ' + currentArabiPcs + ' pcs (Cheese)', parseInt(document.getElementById('price-cheese').textContent), 'assets/food/real-arabi-box.jpg', 'arabi')" data-i18n="addBoxBtn">+ Customize & Order</button>
+            </div>
+
+            <div class="arabi-variant-card featured-variant">
+              <div class="variant-badge badge-red" data-i18n="arabiVarRed">Signature 🔥</div>
+              <div class="variant-name" data-i18n="arabiNameRed">Red Bread (عربي خبز أحمر)</div>
+              <div class="variant-price"><span id="price-red">18</span> <small>SAR</small></div>
+              <p class="variant-desc" data-i18n="arabiDescRed">Our iconic spiced red flatbread sliced in bite-sized pieces with fries & garlic.</p>
+              <button class="btn btn-sm btn-primary w-100 touch-ripple" onclick="openShawarmaCustomizer('Arabi Box ' + currentArabiPcs + ' pcs (Red Bread)', parseInt(document.getElementById('price-red').textContent), 'assets/food/real-arabi-box.jpg', 'arabi')" data-i18n="addBoxBtn">+ Customize & Order</button>
+            </div>
+
+            <div class="arabi-variant-card featured-variant">
+              <div class="variant-badge badge-red" data-i18n="arabiVarRedCheese">Ultimate Combo</div>
+              <div class="variant-name" data-i18n="arabiNameRedCheese">Red Bread + Cheese (أحمر بالجبن)</div>
+              <div class="variant-price"><span id="price-redcheese">19</span> <small>SAR</small></div>
+              <p class="variant-desc" data-i18n="arabiDescRedCheese">Spiced red bread + melted cheese filling for the supreme Usta Ghazi flavor experience.</p>
+              <button class="btn btn-sm btn-primary w-100 touch-ripple" onclick="openShawarmaCustomizer('Arabi Box ' + currentArabiPcs + ' pcs (Red Bread + Cheese)', parseInt(document.getElementById('price-redcheese').textContent), 'assets/food/real-arabi-box.jpg', 'arabi')" data-i18n="addBoxBtn">+ Customize & Order</button>
+            </div>
+          </div>
+
+          <!-- Full Price Reference Table -->
+          <div class="table-toggle-wrapper">
+            <button class="btn-toggle-table" id="toggleTableBtn">
+              <span data-i18n="toggleTableText">Show Full Arabi Price Matrix (6 to 30 pcs)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            
+            <div class="table-responsive" id="fullPriceTable" style="display: none;">
+              <table class="menu-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="thPieces">Pieces (قطع)</th>
+                    <th data-i18n="thRegular">Regular (عادي)</th>
+                    <th data-i18n="thCheese">Cheese (بالجبن)</th>
+                    <th data-i18n="thRed">Red Bread (خبز أحمر)</th>
+                    <th data-i18n="thRedCheese">Red + Cheese (أحمر بالجبن)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>6 pcs (٦ قطع)</strong></td>
+                    <td>17 SAR</td>
+                    <td>18 SAR</td>
+                    <td>18 SAR</td>
+                    <td>19 SAR</td>
+                  </tr>
+                  <tr>
+                    <td><strong>9 pcs (٩ قطع)</strong></td>
+                    <td>25 SAR</td>
+                    <td>26 SAR</td>
+                    <td>26 SAR</td>
+                    <td>27 SAR</td>
+                  </tr>
+                  <tr>
+                    <td><strong>12 pcs (١٢ قطعة)</strong></td>
+                    <td>34 SAR</td>
+                    <td>36 SAR</td>
+                    <td>36 SAR</td>
+                    <td>37 SAR</td>
+                  </tr>
+                  <tr>
+                    <td><strong>18 pcs (١٨ قطعة)</strong></td>
+                    <td>47 SAR</td>
+                    <td>49 SAR</td>
+                    <td>49 SAR</td>
+                    <td>50 SAR</td>
+                  </tr>
+                  <tr>
+                    <td><strong>24 pcs (٢٤ قطعة)</strong></td>
+                    <td>63 SAR</td>
+                    <td>65 SAR</td>
+                    <td>65 SAR</td>
+                    <td>66 SAR</td>
+                  </tr>
+                  <tr>
+                    <td><strong>30 pcs (٣٠ قطعة)</strong></td>
+                    <td>75 SAR</td>
+                    <td>80 SAR</td>
+                    <td>80 SAR</td>
+                    <td>85 SAR</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATEGORY 3: PLATES & SIDES -->
+      <div class="menu-category-block" id="cat-plates" data-cat="plates">
+        <div class="category-title-bar">
+          <h3>
+            <span data-i18n="titlePlates">Plates & French Fries</span>
+            <small data-i18n="subPlates">شاورما صحن وبطاطس</small>
+          </h3>
+          <span class="category-meta" data-i18n="metaPlates">Pure sliced shawarma without wrap bread</span>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/hq-plate.jpg" alt="Shawarma Plate" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Plate</h4>
+                  <div class="item-name-ar">صحن شاورما</div>
+                </div>
+                <div class="item-price">30 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descPlate">A generous platter of tender sliced chicken shawarma served with fresh bread, golden fries, garlic dip, and pickles.</p>
+              <div class="item-footer">
+                <span class="tag" data-i18n="tagPlate">Regular Platter</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('Shawarma Plate (صحن)', 30)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item-card featured-item">
+            <div class="card-ribbon" data-i18n="feastRibbon">Feast</div>
+            <div class="card-food-media">
+              <img src="assets/food/plate-hq.jpg" alt="Shawarma Big Plate" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Shawarma Big Plate</h4>
+                  <div class="item-name-ar">صحن شاورما كبير</div>
+                </div>
+                <div class="item-price">55 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descBigPlate">Extra-large platter loaded with succulent chicken shawarma cuts, multiple bread portions, large fries, and extra sauces for sharing.</p>
+              <div class="item-footer">
+                <span class="tag tag-large" data-i18n="tagBigFeast">👑 Big Feast</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('Shawarma Big Plate (صحن كبير)', 55)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/hq-fries.jpg" alt="French Fries Small" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">French Fries (Small)</h4>
+                  <div class="item-name-ar">بطاطس مقلية (صغير)</div>
+                </div>
+                <div class="item-price">7 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descFriesSmall">Crispy golden deep-fried potatoes seasoned with special spices.</p>
+              <div class="item-footer">
+                <span class="tag" data-i18n="tagSide">Side</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('French Fries Small (بطاطس صغير)', 7)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/hq-fries.jpg" alt="French Fries Large" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">French Fries (Large)</h4>
+                  <div class="item-name-ar">بطاطس مقلية (كبير)</div>
+                </div>
+                <div class="item-price">13 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descFriesLarge">Heaping portion of hot crispy french fries, perfect for sharing.</p>
+              <div class="item-footer">
+                <span class="tag" data-i18n="tagLargeSide">Large Side</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('French Fries Large (بطاطس كبير)', 13)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORY 4: DRINKS -->
+      <div class="menu-category-block" id="cat-drinks" data-cat="drinks">
+        <div class="category-title-bar">
+          <h3>
+            <span data-i18n="titleDrinks">Beverages & Drinks</span>
+            <small data-i18n="subDrinks">المشروبات</small>
+          </h3>
+          <span class="category-meta" data-i18n="metaDrinks">Ice Cold Refreshments</span>
+        </div>
+
+        <div class="menu-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/real-drinks.jpg" alt="Soft Drinks" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Soft Drinks (Ghazia)</h4>
+                  <div class="item-name-ar">مشروبات غازية</div>
+                </div>
+                <div class="item-price">3 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descSoftDrinks">Assorted ice cold canned soft drinks (Pepsi, 7Up, Mirinda, Citrus, etc.).</p>
+              <div class="item-footer">
+                <span class="tag" data-i18n="tagChilled">Chilled</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('Soft Drink (مشروب غازي)', 3)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="card-food-media">
+              <img src="assets/food/real-drinks.jpg" alt="Mineral Water" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="item-header">
+                <div>
+                  <h4 class="item-name-en">Mineral Water</h4>
+                  <div class="item-name-ar">ماء نقي</div>
+                </div>
+                <div class="item-price">1 <small>SAR</small></div>
+              </div>
+              <p class="item-desc" data-i18n="descWater">Pure bottled drinking water, chilled.</p>
+              <div class="item-footer">
+                <span class="tag" data-i18n="tagEssential">Essential</span>
+                <button class="btn btn-sm btn-add touch-ripple" onclick="addToTrayDirect('Bottled Water (ماء)', 1)" data-i18n="addToTrayBtn">+ Add to Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-badge" data-i18n="reviewsBadge">VERIFIED CUSTOMER FEEDBACK</span>
+        <h2 class="section-title" data-i18n="reviewsTitle">What Customers Say on Google Maps</h2>
+        <p class="section-desc" data-i18n="reviewsDesc">
+          Honest experiences from shawarma lovers and Khobar residents who visit us in Al Tahliya.
+        </p>
+
+        <!-- Google Rating Aggregate Card -->
+        <div class="google-rating-summary">
+          <div class="google-logo-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.94 0 12c0 2.06.46 3.84 1.26 5.42l4.02-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            <span data-i18n="googleRevTag">Google Reviews</span>
+          </div>
+          <div class="rating-number">4.8</div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-count" data-i18n="googleRatingSub">Based on verified Google Maps reviews in Al Khobar</div>
+          <a href="https://maps.google.com/?q=8526+King+Khalid+Rd+Al+Tahliyah+Al+Khobar" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+            <span data-i18n="openGmapsBtn">Open in Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Review Filter Chips -->
+      <div class="review-filter-row">
+        <button class="filter-chip active" data-filter="all" data-i18n="rfAll">All Reviews</button>
+        <button class="filter-chip" data-filter="meat" data-i18n="rfMeat">Shawarma Quality</button>
+        <button class="filter-chip" data-filter="redbread" data-i18n="rfRed">Red Bread (خبز أحمر)</button>
+        <button class="filter-chip" data-filter="latenight" data-i18n="rfLate">Late Night</button>
+        <button class="filter-chip" data-filter="clean" data-i18n="rfClean">Cleanliness</button>
+      </div>
+
+      <!-- Reviews Slider / Grid -->
+      <div class="reviews-slider" id="reviewsSlider">
+        
+        <!-- FEATURED USER REVIEW -->
+        <div class="review-card featured-review" data-tags="meat clean">
+          <div class="review-top">
+            <div class="reviewer-avatar avatar-1">G</div>
+            <div class="reviewer-meta">
+              <h4 class="reviewer-name" data-i18n="r1Name">Local Guide • Google User</h4>
+              <div class="review-date" data-i18n="rVerified">Verified Google Review</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-body" data-i18n="r1Body">
+            "Usta Ghazi is the best shawarma spot I’ve tried in Khobar; I want everyone to give it a try. You can really taste the quality of the shawarma, and the place is also very clean. I’d like to thank the owner."
+          </p>
+          <div class="review-badges">
+            <span class="review-pill" data-i18n="r1Badge1">⭐ Best Shawarma in Khobar</span>
+            <span class="review-pill" data-i18n="r1Badge2">✨ Super Clean Place</span>
+          </div>
+        </div>
+
+        <!-- REVIEW 2 -->
+        <div class="review-card" data-tags="redbread meat">
+          <div class="review-top">
+            <div class="reviewer-avatar avatar-2">A</div>
+            <div class="reviewer-meta">
+              <h4 class="reviewer-name">Ahmed Al-Dosari</h4>
+              <div class="review-date" data-i18n="rVerified">Google Maps Review</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-body" data-i18n="r2Body">
+            "The Red Bread (خبز أحمر) Saroukh with cheese is top tier! It has the perfect seasoning that you can't find anywhere else in Tahliya. Fast service and very friendly staff."
+          </p>
+          <div class="review-badges">
+            <span class="review-pill" data-i18n="r2Badge1">🌶️ Red Bread Saroukh</span>
+            <span class="review-pill" data-i18n="r2Badge2">🧀 Cheese Lover</span>
+          </div>
+        </div>
+
+        <!-- REVIEW 3 -->
+        <div class="review-card" data-tags="latenight clean">
+          <div class="review-top">
+            <div class="reviewer-avatar avatar-3">M</div>
+            <div class="reviewer-meta">
+              <h4 class="reviewer-name">Mohammed Saeed</h4>
+              <div class="review-date" data-i18n="rVerified">Google Maps Review</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-body" data-i18n="r3Body">
+            "Lifesaver late at night! They stay open until 4 AM and the quality at 2 AM is just as fresh and hot as lunchtime. Clean kitchen counter right in front of your eyes."
+          </p>
+          <div class="review-badges">
+            <span class="review-pill" data-i18n="r3Badge1">🌙 Open until 4 AM</span>
+            <span class="review-pill" data-i18n="r3Badge2">🍟 Fresh Hot Fries</span>
+          </div>
+        </div>
+
+        <!-- REVIEW 4 -->
+        <div class="review-card" data-tags="meat arabi">
+          <div class="review-top">
+            <div class="reviewer-avatar avatar-4">F</div>
+            <div class="reviewer-meta">
+              <h4 class="reviewer-name">Faisal K.</h4>
+              <div class="review-date" data-i18n="rVerified">Google Maps Review</div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-body" data-i18n="r4Body">
+            "Ordered the 18-piece Arabi gathering box for family night. Huge portions, generous garlic toum, and everyone loved the mix of regular and red bread slices. Great prices too!"
+          </p>
+          <div class="review-badges">
+            <span class="review-pill" data-i18n="r4Badge1">📦 Arabi 18 Pcs Box</span>
+            <span class="review-pill" data-i18n="r4Badge2">💰 Excellent Value</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-swipe-hint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        <span data-i18n="swipeHint">Swipe horizontally on mobile to read more reviews</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATION, HOURS & SOCIAL MEDIA -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="location-grid">
+        
+        <div class="location-info-card">
+          <span class="section-badge" data-i18n="locBadge">FIND US IN AL KHOBAR</span>
+          <h2 class="location-title" data-i18n="locTitle">Visit Usta Ghazi</h2>
+          <p class="location-desc" data-i18n="locDesc">
+            Conveniently situated along the lively King Khalid Road commercial strip in Al Tahliya, right near Al Tazaj.
+          </p>
+
+          <div class="info-list">
+            <!-- Address -->
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="locAddressLabel">Address</strong>
+                <p data-i18n="locAddressText">8526 King Khalid Rd, 3148, Al Tahliyah, Al Khobar 34717, Saudi Arabia</p>
+                <small class="landmark-hint" data-i18n="locLandmark">📍 Near Al Tazaj & Al Amwaj District</small>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="locHoursLabel">Opening Hours</strong>
+                <p data-i18n="locHoursText">Saturday to Friday: <strong>11:00 AM – 4:00 AM</strong></p>
+                <div class="status-badge-inline" id="hoursPill" data-i18n="hoursBadgeOpen">🟢 Open Now (Closes 4:00 AM)</div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="locPhoneLabel">Phone & Orders</strong>
+                <p><a href="tel:0501475425" class="phone-link-bold">0501475425</a></p>
+                <small data-i18n="locPhoneSub">Quick pickup & takeout ordering</small>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="locInstaLabel">Instagram</strong>
+                <p><a href="https://www.instagram.com/ustaghazi/?hl=en" target="_blank" rel="noopener" class="insta-link">@ustaghazi</a></p>
+                <small data-i18n="locInstaSub">Follow us for daily updates & stories</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <a href="https://maps.google.com/?q=8526+King+Khalid+Rd+Al+Tahliyah+Al+Khobar+34717" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span data-i18n="getDirectionsBtn">Get Directions</span>
+            </a>
+            <a href="tel:0501475425" class="btn btn-outline btn-lg">
+              <span data-i18n="callUsBtn">Call 0501475425</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="location-map-card">
+          <div class="map-container">
+            <iframe 
+              title="Usta Ghazi Location Map"
+              src="https://www.google.com/maps?q=8526+King+Khalid+Rd+Al+Tahliyah+Al+Khobar+34717&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+            <div class="map-overlay-badge">
+              <strong>Usta Ghazi (أسطا غازي)</strong>
+              <span data-i18n="overlayLoc">King Khalid Rd, Al Tahliya</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & CALL TO ACTION -->
+  <section class="cta-banner" id="contact">
+    <div class="container cta-box">
+      <div class="cta-text">
+        <h2 data-i18n="ctaTitle">Craving Genuine Shawarma & Red Bread?</h2>
+        <p data-i18n="ctaDesc">Give Usta Ghazi a call or order ahead on WhatsApp. Hot, fresh, and ready when you arrive!</p>
+      </div>
+      <div class="cta-btns">
+        <a href="tel:0501475425" class="btn btn-light btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span data-i18n="ctaCall">Call 0501475425</span>
+        </a>
+        <a href="https://wa.me/966501475425?text=Hello%20Usta%20Ghazi,%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">
+          <span data-i18n="ctaWhatsApp">Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <!-- EXACT RESTAURANT LOGO -->
+        <img src="assets/logo.jpg" alt="Usta Ghazi Logo" class="footer-logo-img">
+        <div>
+          <div class="footer-name-line">
+            <span class="footer-name-en">USTA GHAZI</span>
+            <span class="footer-divider">|</span>
+            <span class="footer-name-ar">أسطا غازي</span>
+          </div>
+          <p data-i18n="footerTagline">Usta Ghazi Charcoal Shawarma • Al Tahliya, Al Khobar</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero" data-i18n="navHome">Home</a>
+        <a href="#menu" data-i18n="navMenu">Menu & Prices</a>
+        <a href="#reviews" data-i18n="navReviews">Google Reviews</a>
+        <a href="#location" data-i18n="navLocation">Location</a>
+        <a href="https://www.instagram.com/ustaghazi/?hl=en" target="_blank" rel="noopener">Instagram</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Usta Ghazi (أسطا غازي). All rights reserved. 8526 King Khalid Rd, Al Tahliyah, Al Khobar 34717.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE FLOATING BOTTOM TOUCH ACTION BAR -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:0501475425" class="mobile-bottom-btn call-action">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span class="call-btn-text"><span data-i18n="mobCall">Call</span> <strong class="call-num-highlight">0501475425</strong></span>
+    </a>
+    <button class="mobile-bottom-btn tray-action" onclick="toggleOrderDrawer()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+      <span><span data-i18n="mobOrder">Order</span> (<span id="mobileTrayCount">0</span>)</span>
+    </button>
+    <a href="https://wa.me/966501475425?text=Hello%20Usta%20Ghazi,%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="mobile-bottom-btn wa-action">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ORDER TRAY SLIDEOUT DRAWER -->
+  <div class="tray-drawer-backdrop" id="trayBackdrop" onclick="toggleOrderDrawer()"></div>
+  <div class="tray-drawer" id="trayDrawer">
+    <div class="tray-header">
+      <div class="tray-title-wrap">
+        <div class="tray-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+          <h3 data-i18n="trayTitle">Your Order Tray</h3>
+        </div>
+        <div class="order-num-pill" id="orderNumPill" title="Assigned Sequential Order Number">
+          <span class="order-num-dot"></span>
+          <span data-i18n="orderNumPrefix">Order</span> <strong id="trayOrderNumText">#2</strong>
+        </div>
+      </div>
+      <button class="tray-close-btn" onclick="toggleOrderDrawer()">&times;</button>
+    </div>
+    
+    <div class="tray-body" id="trayItemsList">
+      <div class="empty-tray-msg">
+        <p data-i18n="emptyTrayTitle">Your order tray is currently empty.</p>
+        <small data-i18n="emptyTraySub">Tap "+ Customize & Order" on any sandwich or Arabi box to tailor your shawarma!</small>
+      </div>
+    </div>
+
+    <div class="tray-footer" id="trayFooter" style="display: none;">
+      <!-- SERVICE / ORDER TYPE SELECTION (CAR PICKUP / TAKEAWAY / DINE-IN) -->
+      <div class="order-type-wrapper">
+        <label class="order-type-title" data-i18n="orderTypeTitle">Service Type:</label>
+        <div class="order-type-pills">
+          <label class="order-type-pill active">
+            <input type="radio" name="orderType" value="car_pickup" checked onchange="handleOrderTypeChange(this.value)">
+            <span data-i18n="optCarPickup">🚗 Car Pickup</span>
+          </label>
+          <label class="order-type-pill">
+            <input type="radio" name="orderType" value="takeaway" onchange="handleOrderTypeChange(this.value)">
+            <span data-i18n="optTakeaway">🛍️ Takeaway</span>
+          </label>
+          <label class="order-type-pill">
+            <input type="radio" name="orderType" value="dine_in" onchange="handleOrderTypeChange(this.value)">
+            <span data-i18n="optDineIn">🍽️ Dine-in</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- AUTH / VEHICLE AUTO-FILL STATUS IN ORDER TRAY -->
+      <div class="tray-auth-banner" id="trayAuthBanner">
+        <div class="tray-auth-msg" id="trayAuthMsg">
+          <span class="auth-icon">💡</span>
+          <span data-i18n="authGuestPrompt">Have an account? Log in to auto-fill car details & track orders.</span>
+        </div>
+        <button type="button" class="btn-link" id="trayAuthActionBtn" onclick="openAuthModal('login')">
+          <span data-i18n="authSignIn">Sign In</span> →
+        </button>
+      </div>
+
+      <!-- CAR PICKUP DETAILS BOX (SHOWN WHEN CAR PICKUP IS SELECTED) -->
+      <div class="car-details-box" id="carDetailsBox">
+        <div class="car-input-group">
+          <label for="carInfoInput" data-i18n="carInfoLabel">Car Model & Color:</label>
+          <input type="text" id="carInfoInput" class="car-input" placeholder="e.g. White Camry / كامري أبيض" data-i18n-ph="carInfoPlaceholder">
+        </div>
+        <div class="car-input-group">
+          <label for="carPlateInput" data-i18n="carPlateLabel">Plate Number (Optional):</label>
+          <input type="text" id="carPlateInput" class="car-input" placeholder="e.g. 1234 ABC / ١٢٣٤ أ ب ج" data-i18n-ph="carPlatePlaceholder">
+        </div>
+        <div class="car-hint">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          <span data-i18n="carHint">🚗 Curbside service: We'll bring your hot order directly to your car window when you arrive!</span>
+        </div>
+      </div>
+
+      <!-- UNIQUE ORDER NUMBER CALLOUT -->
+      <div class="tray-order-number-callout">
+        <span class="order-callout-icon">🏷️</span>
+        <div class="order-callout-text">
+          <span class="order-callout-title" data-i18n="orderAssignedTitle">Your Unique Order Number:</span>
+          <strong class="order-callout-num" id="trayOrderNumCallout">Order #2</strong>
+        </div>
+      </div>
+
+      <div class="tray-summary-row">
+        <span data-i18n="trayTotalLabel">Estimated Total:</span>
+        <strong id="trayTotalPrice">0 SAR</strong>
+      </div>
+      <button class="btn btn-primary btn-lg w-100 touch-ripple" id="sendWhatsAppOrderBtn">
+        <span data-i18n="traySendWABtn">Send Order to WhatsApp (0501475425)</span>
+      </button>
+      <a href="tel:0501475425" class="btn btn-outline btn-sm w-100 mt-2" style="margin-top: 8px;">
+        <span data-i18n="trayCallDirectBtn">Or Call 0501475425 Directly</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SHAWARMA CUSTOMIZATION MODAL -->
+  <div class="custom-modal" id="customizerModal">
+    <div class="custom-modal-backdrop" onclick="closeShawarmaCustomizer()"></div>
+    <div class="custom-modal-card">
+      <div class="custom-modal-header">
+        <div class="custom-header-info">
+          <img id="customModalThumb" src="assets/food/real-wrap-normal.jpg" alt="Item Thumbnail" class="custom-item-thumb">
+          <div>
+            <h3 class="custom-modal-title" id="customModalTitle">Shawarma Normal</h3>
+            <div class="custom-modal-price" id="customModalBasePrice">7 SAR</div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeShawarmaCustomizer()">&times;</button>
+      </div>
+
+      <div class="custom-modal-body">
+        
+        <!-- Bread Selection -->
+        <div class="custom-group" id="breadGroup">
+          <div class="custom-section-title">
+            <span data-i18n="custBreadTitle">Bread Selection (نوع الخبز)</span>
+            <small data-i18n="custRequired">Required</small>
+          </div>
+          <div class="custom-pills-group">
+            <label class="custom-pill-label">
+              <input type="radio" name="custBread" value="Lebanese Bread (خبز لبناني)" checked>
+              <span>🫓 Lebanese Bread (خبز لبناني)</span>
+            </label>
+            <label class="custom-pill-label">
+              <input type="radio" name="custBread" value="Saj Bread (خبز صاج)">
+              <span>🌯 Saj Bread (خبز صاج)</span>
+            </label>
+            <label class="custom-pill-label" id="redBreadRadioOption">
+              <input type="radio" name="custBread" value="Red Bread (خبز أحمر مميز)">
+              <span>🌶️ Red Bread (خبز أحمر مميز)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Garlic Sauce (Toum) Options -->
+        <div class="custom-group">
+          <div class="custom-section-title">
+            <span data-i18n="custGarlicTitle">Garlic Sauce (الثومية)</span>
+            <small data-i18n="custChooseOne">Choose one</small>
+          </div>
+          <div class="custom-pills-group">
+            <label class="custom-pill-label">
+              <input type="radio" name="custGarlic" value="Normal Toum (ثوم عادي)" checked>
+              <span data-i18n="optGarlicNormal">Normal Garlic (ثوم عادي)</span>
+            </label>
+            <label class="custom-pill-label">
+              <input type="radio" name="custGarlic" value="Extra Toum (ثوم زيادة)">
+              <span data-i18n="optGarlicExtra">Extra Toum (ثوم زيادة)</span>
+            </label>
+            <label class="custom-pill-label">
+              <input type="radio" name="custGarlic" value="Without Toum (بدون ثوم)">
+              <span data-i18n="optGarlicNone">Without Garlic (بدون ثوم)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Pickles Option -->
+        <div class="custom-group">
+          <div class="custom-section-title">
+            <span data-i18n="custPicklesTitle">Pickles (المخلل)</span>
+          </div>
+          <div class="custom-pills-group">
+            <label class="custom-pill-label">
+              <input type="radio" name="custPickles" value="With Pickles (مع مخلل)" checked>
+              <span data-i18n="optPicklesWith">With Pickles (مع مخلل)</span>
+            </label>
+            <label class="custom-pill-label">
+              <input type="radio" name="custPickles" value="Without Pickles (بدون مخلل)">
+              <span data-i18n="optPicklesNone">Without Pickles (بدون مخلل)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- French Fries inside sandwich -->
+        <div class="custom-group" id="friesInsideGroup">
+          <div class="custom-section-title">
+            <span data-i18n="custFriesTitle">Fries Inside (البطاطس داخل الساندوتش)</span>
+          </div>
+          <div class="custom-pills-group">
+            <label class="custom-pill-label">
+              <input type="radio" name="custFries" value="With Fries Inside (مع بطاطس)" checked>
+              <span data-i18n="optFriesWith">With Fries (مع بطاطس)</span>
+            </label>
+            <label class="custom-pill-label">
+              <input type="radio" name="custFries" value="No Fries Inside (بدون بطاطس)">
+              <span data-i18n="optFriesNone">Without Fries Inside (بدون بطاطس)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Addons Checkboxes (Only Menu Ingredients) -->
+        <div class="custom-group">
+          <div class="custom-section-title">
+            <span data-i18n="custAddonsTitle">Extra Preferences (خيارات إضافية)</span>
+            <small data-i18n="custOptional">Optional</small>
+          </div>
+
+          <label class="custom-addon-item">
+            <span>🧀 <span data-i18n="addonCheese">Extra Melted Cheese (+1 SAR)</span></span>
+            <input type="checkbox" id="addonCheeseCheck" onchange="updateCustomizerTotal()">
+          </label>
+          <label class="custom-addon-item">
+            <span>🔥 <span data-i18n="addonCrispy">Extra Toasted / Crispy (تحمير زيادة / مقمر)</span></span>
+            <input type="checkbox" id="addonCrispyCheck">
+          </label>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="custom-group">
+          <div class="custom-section-title">
+            <span data-i18n="custNotesTitle">Special Instructions (ملاحظات خاصة)</span>
+          </div>
+          <textarea id="customNotesInput" class="custom-notes-input" placeholder="e.g. Cut in half, separate garlic, etc. (مثال: قطع الساندوتش نصين، الثوم جانبي...)"></textarea>
+        </div>
+
+      </div>
+
+      <div class="custom-modal-footer">
+        <div class="qty-stepper">
+          <button class="qty-btn" onclick="stepCustomQty(-1)">−</button>
+          <span class="qty-val" id="customQtyVal">1</span>
+          <button class="qty-btn" onclick="stepCustomQty(1)">+</button>
+        </div>
+        <button class="btn btn-primary btn-add-custom-final touch-ripple" onclick="submitCustomizedShawarma()">
+          <span id="customFinalBtnText">Add to Order • 7 SAR</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORIGINAL MENU PHOTO LIGHTBOX MODAL -->
+  <div class="menu-modal" id="menuModal">
+    <div class="modal-backdrop" id="closeModalBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 data-i18n="origMenuModalTitle">Original Shawarma Menu (شاورما أسطا غازي)</h3>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/menu-original-hq.png" alt="Usta Ghazi Original Menu" class="modal-menu-img">
+      </div>
+      <div class="modal-footer">
+        <span>Phone: 0501475425 • 8526 King Khalid Rd, Al Tahliyah, Khobar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       USER AUTHENTICATION MODAL (SIGN UP & LOG IN)
+       ========================================================================== -->
+  <div class="auth-modal" id="authModal" style="display: none;">
+    <div class="modal-backdrop" id="authBackdrop" onclick="closeAuthModal()"></div>
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="auth-brand">
+          <img src="assets/logo.jpg" alt="Logo" class="auth-logo-img">
+          <div>
+            <h3 class="auth-title">Usta Ghazi | أسطا غازي</h3>
+            <span class="auth-subtitle" id="authHeaderSubtitle">Customer Account</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs" id="authTabs">
+        <button class="auth-tab-btn active" id="tabLoginBtn" onclick="switchAuthTab('login')">
+          <span data-i18n="authLoginTab">Log In</span>
+        </button>
+        <button class="auth-tab-btn" id="tabSignupBtn" onclick="switchAuthTab('signup')">
+          <span data-i18n="authRegisterTab">Sign Up</span>
+        </button>
+      </div>
+
+      <!-- Alert box for errors or success -->
+      <div class="auth-alert" id="authAlert" style="display: none;"></div>
+
+      <!-- LOG IN FORM -->
+      <form class="auth-form" id="loginForm" onsubmit="handleLoginSubmit(event)">
+        <div class="auth-field">
+          <label for="loginPhone" data-i18n="authPhone">Phone Number</label>
+          <div class="phone-input-wrap">
+            <span class="country-prefix-badge">🇸🇦 +966</span>
+            <input type="tel" id="loginPhone" required placeholder="5X XXX XXXX" data-i18n-ph="authPhonePh" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="loginPassword" data-i18n="authPassword">Password</label>
+          <div class="input-with-icon">
+            <input type="password" id="loginPassword" required placeholder="••••••••" autocomplete="current-password">
+            <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('loginPassword', this)" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-row-sub">
+          <label class="auth-checkbox">
+            <input type="checkbox" id="loginRemember" checked>
+            <span data-i18n="authRemember">Remember me</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-100 touch-ripple auth-submit-btn">
+          <span data-i18n="authLoginBtn">Log In</span>
+        </button>
+
+        <p class="auth-switch-prompt">
+          <span>Don't have an account?</span>
+          <button type="button" class="btn-link" onclick="switchAuthTab('signup')" data-i18n="authSignUp">Sign Up</button>
+        </p>
+      </form>
+
+      <!-- SIGN UP FORM -->
+      <form class="auth-form" id="signupForm" style="display: none;" onsubmit="handleSignupSubmit(event)">
+        <div class="auth-field">
+          <label for="signupName" data-i18n="authFullName">Full Name</label>
+          <div class="input-with-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            <input type="text" id="signupName" required placeholder="e.g. Faisal Al-Otaibi" data-i18n-ph="authFullNamePh" autocomplete="name">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="signupPhone" data-i18n="authPhone">Phone Number</label>
+          <div class="phone-input-wrap">
+            <span class="country-prefix-badge">🇸🇦 +966</span>
+            <input type="tel" id="signupPhone" required placeholder="5X XXX XXXX" data-i18n-ph="authPhonePh" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="auth-field">
+          <label for="signupPassword" data-i18n="authPassword">Password</label>
+          <div class="input-with-icon">
+            <input type="password" id="signupPassword" required minlength="6" placeholder="At least 6 characters" data-i18n-ph="authPasswordPh" autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('signupPassword', this)" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Optional Vehicle Pickup Info -->
+        <div class="auth-optional-box">
+          <div class="optional-box-header">
+            <span>🚗</span>
+            <div>
+              <strong data-i18n="authSavedVehicle">Saved Pickup Vehicle</strong>
+              <small data-i18n="authSavedVehicleDesc">Auto-fills your car details when ordering</small>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label for="signupCarModel" data-i18n="authCarModel">Car Model & Color</label>
+            <input type="text" id="signupCarModel" placeholder="e.g. White Camry" data-i18n-ph="authCarModelPh">
+          </div>
+          <div class="auth-field">
+            <label for="signupPlate" data-i18n="authPlate">Plate Number</label>
+            <input type="text" id="signupPlate" placeholder="e.g. 1234 ABC" data-i18n-ph="authPlatePh">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-100 touch-ripple auth-submit-btn">
+          <span data-i18n="authCreateBtn">Create Account</span>
+        </button>
+
+        <p class="auth-switch-prompt">
+          <span>Already have an account?</span>
+          <button type="button" class="btn-link" onclick="switchAuthTab('login')" data-i18n="authLoginBtn">Log In</button>
+        </p>
+      </form>
+
+      <!-- 4-DIGIT SECURITY VERIFICATION STEP -->
+      <div class="auth-otp-step" id="authOtpStep" style="display: none;">
+        <button type="button" class="otp-back-btn" onclick="cancelOtpVerification()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+          <span data-i18n="otpBack">Back</span>
+        </button>
+
+        <div class="otp-header-box">
+          <div class="otp-shield-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="otpTitle">Security Verification</h3>
+          <p class="otp-instruction">
+            <span data-i18n="otpSubtitle">We sent a 4-digit code via SMS to:</span>
+            <strong id="otpTargetPhone" class="otp-phone-badge">+966 5X XXX XXXX</strong>
+          </p>
+        </div>
+
+        <form onsubmit="handleOtpSubmit(event)" class="otp-form" id="otpForm">
+          <div class="otp-digits-row" id="otpDigitsRow">
+            <input type="tel" maxlength="1" class="otp-digit-input" id="otp1" autocomplete="one-time-code" required autofocus>
+            <input type="tel" maxlength="1" class="otp-digit-input" id="otp2" required>
+            <input type="tel" maxlength="1" class="otp-digit-input" id="otp3" required>
+            <input type="tel" maxlength="1" class="otp-digit-input" id="otp4" required>
+          </div>
+
+          <div class="otp-resend-row">
+            <span id="otpCountdownText" class="otp-timer-text">
+              <span data-i18n="otpResendIn">Resend code in</span> <strong id="otpCountdownSec">45</strong>s
+            </span>
+            <button type="button" id="otpResendBtn" class="btn-link" style="display: none;" onclick="resendOtpCode()" data-i18n="otpResend">Resend Code</button>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-100 touch-ripple auth-submit-btn" id="verifyOtpBtn">
+            <span data-i18n="otpVerifyBtn">Verify & Continue</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       USER PROFILE & ORDER HISTORY MODAL
+       ========================================================================== -->
+  <div class="profile-modal" id="profileModal" style="display: none;">
+    <div class="modal-backdrop" id="profileBackdrop" onclick="closeProfileModal()"></div>
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-user-summary">
+          <div class="profile-avatar" id="profileAvatar">U</div>
+          <div class="profile-user-info">
+            <h3 id="profileName">User Name</h3>
+            <span class="profile-phone" id="profilePhone">05xxxxxxxx</span>
+            <span class="member-tag">★ Usta Ghazi Club</span>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeProfileModal()">&times;</button>
+      </div>
+
+      <div class="profile-body">
+        <!-- Card 1: Saved Vehicle for Pickup -->
+        <div class="profile-section-card">
+          <div class="section-card-title">
+            <span>🚗</span>
+            <div>
+              <strong data-i18n="authSavedVehicle">Saved Pickup Vehicle</strong>
+              <small data-i18n="authSavedVehicleDesc">Auto-fills your car details when ordering</small>
+            </div>
+          </div>
+          <form onsubmit="handleSaveProfileVehicle(event)" class="profile-vehicle-form">
+            <div class="auth-field">
+              <label for="profileCarModel" data-i18n="authCarModel">Car Model & Color</label>
+              <input type="text" id="profileCarModel" placeholder="e.g. White Camry" data-i18n-ph="authCarModelPh">
+            </div>
+            <div class="auth-field">
+              <label for="profilePlate" data-i18n="authPlate">Plate Number</label>
+              <input type="text" id="profilePlate" placeholder="e.g. 1234 ABC" data-i18n-ph="authPlatePh">
+            </div>
+            <button type="submit" class="btn btn-outline btn-sm w-100" data-i18n="authSaveBtn">Save Vehicle Details</button>
+          </form>
+        </div>
+
+        <!-- Card 2: Order History -->
+        <div class="profile-section-card">
+          <div class="section-card-title">
+            <span>📋</span>
+            <div>
+              <strong data-i18n="authPastOrders">Order History</strong>
+              <small>Your recent orders at Usta Ghazi</small>
+            </div>
+          </div>
+          <div class="orders-history-list" id="profileOrdersList">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-footer">
+        <button type="button" class="btn btn-danger w-100 touch-ripple" onclick="handleLogout()" data-i18n="authLogout">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </div>
+  <!-- Simulated SMS Notification Toast -->
+  <div class="sms-notification-toast" id="smsNotificationToast" style="display: none;">
+    <div class="sms-toast-card" onclick="quickFillOtpFromToast()">
+      <div class="sms-toast-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+      </div>
+      <div class="sms-toast-content">
+        <div class="sms-toast-head">
+          <span class="sms-toast-app">MESSAGES &bull; NOW</span>
+          <span class="sms-toast-badge">USTA GHAZI</span>
+        </div>
+        <p class="sms-toast-text">
+          Your security code is <strong id="smsToastCode" class="sms-code-pill">0000</strong>. Enter this code to verify your account.
+        </p>
+        <span class="sms-toast-hint">Tap here to autofill code ⚡</span>
+      </div>
+      <button type="button" class="sms-toast-close" onclick="hideSmsToast(event)" aria-label="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
