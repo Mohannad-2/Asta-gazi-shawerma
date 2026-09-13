@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="14" fill="url(#bgGradPlate)"/>
+  <ellipse cx="100" cy="132" rx="75" ry="10" fill="#94A3B8" opacity="0.4"/>
+  <!-- Dark Serving Platter -->
+  <rect x="25" y="44" width="150" height="80" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <!-- Döner meat slices mountain in center -->
+  <g transform="translate(35, 52)">
+    <!-- Shaved doner ribbons -->
+    <path d="M10 20 Q35 5 60 18 Q80 8 95 22 Q70 38 45 35 Z" fill="#92400E"/>
+    <path d="M15 28 Q45 15 75 25 Q90 20 100 35 Q60 50 25 45 Z" fill="#78350F"/>
+    <path d="M20 40 Q55 25 85 38 Q70 55 30 52 Z" fill="#451A03"/>
+    <!-- Seasoning highlights -->
+    <path d="M25 22 Q50 12 70 20" stroke="#FBBF24" stroke-width="1.5" fill="none"/>
+    <path d="M35 32 Q65 24 85 30" stroke="#FDE68A" stroke-width="1.5" fill="none"/>
+  </g>
+  <!-- Crispy Fries on side -->
+  <g transform="translate(132, 54)">
+    <rect x="0" y="2" width="22" height="6" rx="2" fill="#F59E0B" transform="rotate(-15 0 2)"/>
+    <rect x="2" y="14" width="24" height="6" rx="2" fill="#FBBF24" transform="rotate(10 2 14)"/>
+    <rect x="0" y="28" width="23" height="6" rx="2" fill="#F59E0B" transform="rotate(-20 0 28)"/>
+    <rect x="4" y="42" width="20" height="6" rx="2" fill="#FBBF24" transform="rotate(5 4 42)"/>
+  </g>
+  <!-- Garlic sauce scoop -->
+  <circle cx="50" cy="105" r="9" fill="#FFFFFF"/>
+  <circle cx="50" cy="105" r="6" fill="#F8FAFC"/>
+  <!-- Pickles -->
+  <circle cx="70" cy="106" r="6" fill="#65A30D"/>
+  <circle cx="82" cy="105" r="5" fill="#4D7C0F"/>
+  <rect x="12" y="12" width="105" height="22" rx="6" fill="#0F172A"/>
+  <text x="64" y="27" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">30–55 SAR • صحن 🍽️</text>
+</svg>

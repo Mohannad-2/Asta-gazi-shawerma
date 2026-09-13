@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F2"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="pitaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="meatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309"/>
+      <stop offset="50%" stop-color="#78350F"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="14" fill="url(#bgGrad)"/>
+  <!-- Wrap shadow -->
+  <ellipse cx="100" cy="125" rx="70" ry="12" fill="#E2E8F0" opacity="0.6"/>
+  <!-- Shawarma Wrap Body -->
+  <g transform="rotate(-15 100 75)">
+    <!-- Base bread roll -->
+    <rect x="40" y="55" width="125" height="42" rx="18" fill="url(#pitaGrad)" stroke="#B45309" stroke-width="2"/>
+    <!-- Grill marks -->
+    <line x1="60" y1="56" x2="52" y2="95" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <line x1="85" y1="56" x2="77" y2="95" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <line x1="110" y1="56" x2="102" y2="95" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <line x1="135" y1="56" x2="127" y2="95" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <!-- Open wrap face / filling -->
+    <ellipse cx="160" cy="76" rx="12" ry="20" fill="url(#meatGrad)" stroke="#78350F" stroke-width="1.5"/>
+    <!-- Meat shreds -->
+    <path d="M154 65 Q164 68 156 75 T160 88" stroke="#FDE68A" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M158 62 Q166 72 161 82" stroke="#FEF3C7" stroke-width="2" fill="none"/>
+    <!-- Pickle slice -->
+    <ellipse cx="157" cy="73" rx="4" ry="7" fill="#65A30D" stroke="#365314" stroke-width="1"/>
+    <circle cx="157" cy="73" r="1.5" fill="#A3E635"/>
+    <!-- Toum / Garlic Cream drip -->
+    <path d="M148 70 Q156 72 150 78 Q144 82 152 86" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="149" cy="79" r="2.5" fill="#FFFFFF"/>
+  </g>
+  <!-- Label tag -->
+  <rect x="12" y="12" width="76" height="22" rx="6" fill="#DC2626"/>
+  <text x="50" y="27" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">7 SAR • عادي</text>
+</svg>

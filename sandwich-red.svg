@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF2F2"/>
+      <stop offset="100%" stop-color="#FECACA"/>
+    </linearGradient>
+    <linearGradient id="redPita" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="40%" stop-color="#DC2626"/>
+      <stop offset="80%" stop-color="#B91C1C"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" rx="14" fill="url(#bgGradRed)"/>
+  <ellipse cx="100" cy="125" rx="70" ry="12" fill="#E2E8F0" opacity="0.6"/>
+  <g transform="rotate(-15 100 75)">
+    <!-- Red spiced flatbread roll -->
+    <rect x="40" y="55" width="125" height="42" rx="18" fill="url(#redPita)" stroke="#991B1B" stroke-width="2"/>
+    <!-- Dark toasted grill lines -->
+    <line x1="60" y1="56" x2="52" y2="95" stroke="#450A0A" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+    <line x1="85" y1="56" x2="77" y2="95" stroke="#450A0A" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+    <line x1="110" y1="56" x2="102" y2="95" stroke="#450A0A" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+    <line x1="135" y1="56" x2="127" y2="95" stroke="#450A0A" stroke-width="3.5" stroke-linecap="round" opacity="0.75"/>
+    <!-- Red spice flakes on bread -->
+    <circle cx="70" cy="65" r="1.5" fill="#450A0A"/>
+    <circle cx="95" cy="80" r="1.5" fill="#450A0A"/>
+    <circle cx="120" cy="68" r="1.5" fill="#450A0A"/>
+    <!-- Filling -->
+    <ellipse cx="160" cy="76" rx="12" ry="20" fill="#78350F" stroke="#451A03" stroke-width="1.5"/>
+    <path d="M152 64 Q165 70 156 82" stroke="#FDE68A" stroke-width="2" fill="none"/>
+    <ellipse cx="158" cy="74" rx="4" ry="7" fill="#65A30D"/>
+    <!-- Red chili powder drizzle & white garlic -->
+    <path d="M148 68 Q158 74 150 82" fill="#FFFFFF"/>
+    <path d="M150 78 Q158 84 154 90" fill="#DC2626"/>
+  </g>
+  <rect x="12" y="12" width="105" height="22" rx="6" fill="#B91C1C"/>
+  <text x="64" y="27" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">8 SAR • خبز أحمر 🔥</text>
+</svg>
